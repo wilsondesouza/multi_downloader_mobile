@@ -62,7 +62,7 @@ class _DownloadPageState extends State<DownloadPage>
       _linkDownload = null;
     });
 
-    final uri = Uri.parse("http://34.127.76.161:8000/download/");
+    final uri = Uri.parse("http://10.0.2.2:8000/download/");
     final response = await http.post(
       uri,
       headers: {'Content-Type': 'application/json'},
@@ -73,7 +73,7 @@ class _DownloadPageState extends State<DownloadPage>
       final data = jsonDecode(response.body);
       setState(() {
         _mensagem = data['mensagem'];
-        _linkDownload = "http://34.127.76.161:8000${data['link_download']}";
+        _linkDownload = "http://10.0.2.2:8000${data['link_download']}";
       });
     } else {
       setState(() {
