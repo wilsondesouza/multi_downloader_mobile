@@ -8,8 +8,8 @@
 
 Bem-vindo ao **Multi Downloader Mobile**! Este projeto é uma aplicação gráfica que permite baixar vídeos de várias plataformas populares, como YouTube, Instagram, Twitter e Facebook, utilizando o framework `Flutter` para a interface gráfica.
 
- <img  alt="Loading" height="600px" width="270px" src="https://i.ibb.co/zVrKkcCV/loading.png">
-  <img alt="Main Page" height="600px" width="270px" src="https://i.ibb.co/dC9QQyH/main.png">
+ <img align="left" alt="Loading" height="600px" width="270px" src="https://i.ibb.co/zVrKkcCV/loading.png">
+  <img align="center" alt="Main Page" height="600px" width="270px" src="https://i.ibb.co/dC9QQyH/main.png">
 
 ---
 
