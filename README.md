@@ -8,8 +8,10 @@
 
 Bem-vindo ao **Multi Downloader Mobile**! Este projeto é uma aplicação gráfica que permite baixar vídeos de várias plataformas populares, como YouTube, Instagram, Twitter e Facebook, utilizando o framework `Flutter` para a interface gráfica.
 
----
+ <img  alt="Loading" height="600px" width="270px" src="https://i.ibb.co/zVrKkcCV/loading.png">
+  <img alt="Main Page" height="600px" width="270px" src="https://i.ibb.co/dC9QQyH/main.png">
 
+---
 
 ## 🧱 Estrutura do Projeto
 
@@ -27,7 +29,7 @@ multi_downloader/
 │       ├── ...outros arquivos...
 │       ├── lib
 │       │   ├── main.dart
-│       │   └── splash.screen.dart
+│       │   └── splash_screen.dart
         └── ...outros arquivos...
 ```
 
@@ -43,9 +45,23 @@ multi_downloader/
 
 ---
 
-## Como Usar 🛠️
+## Como Usar (Rodar Localmente) 🛠️
 
-**Observações:** Ao executar o programa, inserir a URL e fazer o download do vídeo, será criada automaticamente uma subpasta no diretório raiz onde se encontra o aplicativo, de acordo com a origem: `downloads-Youtube` para vídeos do Youtube, `downloads-Instagram` para vídeos do Instagram, `downloads-Twitter` para vídeos do Twitter e `downloads-Facebook` para vídeos do Facebook.
+### Backend (FastAPI)
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --host 127.0.0.1 --port 8000
+```
+
+### Frontend (Flutter)
+```bash
+cd frontend/multi_downloader_mobile
+flutter pub get
+flutter run
+```
 
 ---
 
@@ -64,6 +80,9 @@ A interface gráfica é construída utilizando [Flutter](https://flutter.dev/) e
 
 - [fastapi](https://fastapi.tiangolo.com/): Estrutura da Web moderna e rápida para criar APIs com Python.
 - [yt_dlp](https://github.com/yt-dlp/yt-dlp): Biblioteca para download de vídeos do YouTube e de outras redes sociais.
+- [uvicorn](https://www.uvicorn.org/): Implementação de servidor web ASGI para Python.
+- [pydantic](https://docs.pydantic.dev/): Defini modelos que você pode usar para verificar se os dados estão em conformidade com o formato que você espera antes de usá-los.
+- [python-multipart](https://pypi.org/project/python-multipart/): Biblioteca para manipular solicitações POST multipart/form-data
 - [dio](https://pub.dev/packages/dio): Pacote de rede HTTP, suporta configuração global, upload/download de arquivos, adaptadores personalizados.
 - [path_provider](https://pub.dev/packages/path_provider): Plugin para encontrar locais comumente usados no sistema de arquivos.
 - [open_file](https://pub.dev/packages/open_file): Plugin que pode chamar o APP nativo para abrir arquivos com string resulta em vibração.
@@ -72,7 +91,6 @@ A interface gráfica é construída utilizando [Flutter](https://flutter.dev/) e
 - [google_fonts](https://pub.dev/packages/google_fonts): Um pacote Flutter para usar fontes de fonts.google.com.
 
 ---
-
 
 ## Contribuição 🤝
 
